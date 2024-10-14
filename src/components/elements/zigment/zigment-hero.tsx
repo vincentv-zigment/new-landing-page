@@ -105,7 +105,7 @@ const ZigmentHero = (   ) => {
             </div>
             <div className="pb-[20px] has_fade_anim" data-delay="0.30">
               <div className="">
-                <h1 className="text-[50px] md:text-[70px] lg:text-[70px] xl:text-[100px] leading-none font-black relative inline">
+                <h1 className="text-[50px] md:text-[70px] lg:text-[50px] xl:text-[100px] leading-none font-black relative inline">
                   <Image
                     width={60}
                     height={70}
