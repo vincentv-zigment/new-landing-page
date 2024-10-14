@@ -70,7 +70,7 @@ const Counter = ( ) => {
               text={`1-1 Conversations at Scale`}
               className="pb-[15px] md:pb-[24px] has_fade_anim"
             />
-            <div className="space-y-4 pb-[30px] md:pb-[55px] max-w-full lg:max-w-[455px] has_fade_anim">
+            <div className="space-y-4 pb-[30px] md:pb-[55px] w-full has_fade_anim">
                 <p className="  ">
                 {`Zigment engages each customer individually, giving full attention to their specific needs.`}
                 </p>

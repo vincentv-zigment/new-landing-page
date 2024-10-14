@@ -24,19 +24,18 @@ const items = [
   {
     image:'',
     title:'Data Security',
-    description:`We ensure that your proprietary data isn’t available in public domains while running LLMs. We also ensure that only the permitted data is shared with the users and nothing more. We are ISO 27001, SOC 2, HIPAA complaint.`
+    description:`Ensuring that your proprietary data isn’t shared on public domains. And only the permitted data is shared with the users and nothing more. `
   },
   {
     image:'',
     title:'Trustability',
-    description:`Zigment Platform implements external guardrails to ensure that the output from the LLMs is not only free of any hallucinations but also compliant with your enterprise policies and benchmarks.`
+    description:`External guardrails to ensure that the AI output is not only free of hallucinations but also compliant with your enterprise policies and benchmarks.`
   }
   ,
   {
     image:'',
     title:'Observability',
-    description:`Gain visibility into the underlying costs and ensure service reliability with a complete traceability of data flowing within the system. Realtime monitoring of all the systems both at macro and micro levels so that you are in the know all the time.
-`
+    description:`Gain visibility into the underlying costs and ensure service reliability with a complete traceability of data flowing within the system with real-time monitoring.`
   }
 ]
 
@@ -58,6 +57,8 @@ const EnterpriseGradeAI = ( ) => {
           text={`Enterprise grade AI`}
           className="w-full mx-auto text-center has_fade_anim"
         />
+           <div className="max-w-[520px] mx-auto text-center py-8">
+              <p className="has_fade_anim">{`Zigment is ISO 27001, SOC2 and HIPPA compliant`}</p></div>
         <Carousel
           dir="ltr"
           opts={{
@@ -84,7 +85,7 @@ const EnterpriseGradeAI = ( ) => {
                       
                       </div>
                     </div>
-                    <p className="text-[19px] 2xl:text-[22px] leading-[1.36] mt-[36px]">
+                    <p className="text-[19px] text-center 2xl:text-[22px] leading-[1.36] mt-[36px]">
                       {item.description}
                     </p>
                     

@@ -71,14 +71,12 @@ const MeetZig = () => {
           </div>
           <div className="order-1 lg:order-2">
             <Title1
-              text={`Meet Zig, your best sales team yet.`}
+              text={`Meet Zig, our best sales rep.`}
               className="has_fade_anim pb-[15px] md:pb-[24px]"
             />
             <div className="space-y-4">
                 <p className="has_fade_anim">{`Even the best of salespeople can’t be everywhere. So, we created one that can.`}</p>
-                <p className="has_fade_anim"><strong>Zigment</strong> {`, an AI-native platform that is built ground up with every trait that makes a great salesperson.`}</p>
-                <p className="has_fade_anim">{`Knowledgeable, attentive, honest, empathetic. Offering real-time, personalized, one-on-one interactions that are meaningful, contextually relevant and focused.`}</p>
-                <p className="has_fade_anim">{`Ensuring unparalleled customer success and loyalty across your entire pipeline.`}</p>
+                <p className="has_fade_anim">{`Zig is knowledgeable, attentive, honest, empathetic. Offering real-time, personalized, one-on-one interactions that are meaningful, contextually relevant and focused.`}</p>
             </div>
 
             
@@ -87,7 +85,7 @@ const MeetZig = () => {
                 href={"#"}
                 className={cn(buttonVariants({ variant: "primary2" }))}
               >
-                Build Community
+                Say Hi !
               </Link>
             </div>
           </div>

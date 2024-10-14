@@ -1,48 +1,58 @@
 "use client";
 
 import { useRef } from "react";
+import Link from "next/link";
 
 // gsap
 import { useGSAP } from "@gsap/react";
 import hasFadeAnim from "@/lib/animation/hasFadeAnim";
+import hasPinContent from "@/lib/animation/hasPinContent";
 
 // lib
-import { delayTime } from "@/lib/helper/delayTime";
+import { cn } from "@/lib/utils";
 
 // types
-import { ServiceDetailsType } from "@/types";
+import { ActionBtnType } from "@/types";
+
+// shadcn components
+import { buttonVariants } from "@/components/ui/button";
 
 // components
 import TitleSection2 from "@/components/shared/title-section/title-section2";
+import ServiceCard6 from "../service/card/service-card6";
+import Title1 from "@/components/shared/title/title1";
 
 const contentArray = [
   {
-    title: 'Engage from Ads',
-    description: 'Engage your audience from Meta & Google Ads',
-    image:'/assets/imgs/icon/icon-r-1.png'
+    title: "Lead Ad Campaigns",
+    short_description:
+      "Engage your audience from Meta & Google Ads. Leadcard campaigns or CTWA",
+    image: `/assets/imgs/zigment-landing-page/workflow-section/icon-s-32.png`,
   },
   {
-    title: 'Convert Visitors',
-    description: 'Convert your website visitors into customers',
-    image:'/assets/imgs/icon/icon-r-2.png'
+    title: "Website Visitors",
+    short_description:
+      "Engage, Qualify & Convert your website visitors into customers",
+    image: `/assets/imgs/zigment-landing-page/workflow-section/icon-s-29.png`,
   },
   {
-    title: 'Engage Social Media Fans',
-    description: 'Instantly engage your social media fans',
-    image:'/assets/imgs/icon/icon-r-3.png'
+    title: "Social Audience",
+    short_description: "Instantly engage your social media fans from comments or DMs",
+    image: `/assets/imgs/zigment-landing-page/workflow-section/icon-s-30.png`,
   },
   {
-    title: 'Conversations from Various Media',
-    description: 'Start a conversation from a QR code or a number on packaging, a print Ad or a TV / video ad',
-    image:'/assets/imgs/icon/icon-r-4.png'
-  }
+    title: "Print & TV Media",
+    short_description:
+      "Start a conversation from a QR code or a number on packaging, a print Ad or a TV / video ad",
+    image: `/assets/imgs/zigment-landing-page/workflow-section/icon-s-31.png`,
+  },
+  
 ];
 
- 
-
-const Service = ( ) => {
-
+const LeadConversion = () => {
   const containerRef = useRef<HTMLDivElement>(null!);
+  const pinElement = useRef<HTMLDivElement>(null!);
+  const pinArea = useRef<HTMLDivElement>(null!);
 
   useGSAP(
     () => {
@@ -51,80 +61,71 @@ const Service = ( ) => {
     { scope: containerRef }
   );
 
+  useGSAP(
+    () => {
+      hasPinContent(pinElement.current, pinArea.current, "top 100px", 1024);
+    },
+    { scope: containerRef }
+  );
+
   return (
-    <section className="pt-[70px] lg:pt-[100px] xl:pt-[185px]">
-      <div className="container" ref={containerRef}>
-        <div className="mb-[30px] md:mb-[63px]">
-          <TitleSection2
-            title={`No touchpoint, untouched
-`}
-            details={`Zigment can engage in real-time with all touchpoints across every channel 
-your business may have, from websites to social media to messenger apps.
-It seamlessly integrates with Google / Meta lead generation systems too.
-`}
-            titleClassName="max-w-[710px]"
-            detailsClassName="max-w-[710px]"
-          />
+    <section className="sec_space1 ">
+      <div className="container bg-white" ref={containerRef}>
+        <div
+          className="flex justify-between flex-col xl:flex-row-reverse  gap-x-[20px] gap-y-[40px]"
+          ref={pinArea}
+        >
+          <div className="w-full" ref={pinElement}>
+            <div className={cn("text-center", `text-left`)}>
+        <div>
+ 
         </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {contentArray.map((item, i) => (
-              <div
-                key={item.title}
-                className="has_fade_anim"
-                data-delay={delayTime(i + 1)}
+              <Title1
+                text={`No touchpoint, untouched`}
+                className={cn("max-w-[565px] mx-auto has_fade_anim", ``)}
+              />
+              <p
+                className={cn(
+                  "mt-[23px] lg:mt-[33px] max-w-[550px] mx-auto has_fade_anim",
+                  ``
+                )}
               >
-                <ServiceCard2 service={item} />
-              </div>
-            ))}
+                {`Zigment can engage in real-time with touchpoints across every channel, from websites 
+to social media to messenger apps. And your Google / Meta Ads too`}
+              </p>
+ 
+            </div>
+            <div className="py-[25px] lg:py-[45px] has_fade_anim text-cneter w-fit">
+              <Link
+                href={"#"}
+                className={cn(buttonVariants({ variant: "primary2" }))}
+              >
+                Explore workflows
+              </Link>
+            </div>
           </div>
+          <div className="max-w-full xl:max-w-[700px] overflow-hidden bg-white" style={{background:'white'}}>
+            <div className="grid grid-cols-1 md:grid-cols-2  md:gap-y-[70px] -mx-[50px] bg-white" style={{background:'white'}}>
+              {contentArray.map((service) => (
+                <div
+                  key={service.title}
+                  className="border-s border-border has_fade_anim bg-white py-[25px] md:p-0"
+                >
+                  <ServiceCard6
+                    service={{
+                      data: {
+                        ...service,
+                      },
+                    }}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
 };
 
-export default Service;
-
-
-import Image from "next/image";
-import Link from "next/link";
-
-// types
-
-type ServiceProps = {
-  service: {
-    title: string;
-    description: string;
-    image: string;
-  };
-};
-
-const ServiceCard2 = ({ service }: ServiceProps) => {
-  return (
-    <div className="px-[20px] py-[30px] lg:py-[20px] xl:px-[30px] xl:py-[40px] border border-border rounded-[40px] text-center h-full flex flex-col justify-between items-center">
-      <div className="pb-[16px] md:pb-[35px] w-[60px] mx-auto">
-        <Image width={60} height={60} src={service.image} alt="icon" />
-      </div>
-      <div>
-        <Link href="#">
-          <h3 className="text-[18px] xl:text-[24px] max-w-[182px] mx-auto pb-[10px] md:pb-[16px]">
-            {service.title}
-          </h3>
-        </Link>
-        <p className="pb-[20px] lg:pb-[32px]">{service.description}</p>
-      </div>
-      <Link href="#" className="inline-block">
-        <div className="rounded-full p-0 flex justify-center items-center w-[50px] h-[50px] md:w-[60px] md:h-[60px] bg-transparent border border-border hover:bg-theme">
-          <Image
-            width={19}
-            height={14}
-            src="/assets/imgs/icon/arrow.png"
-            className="-rotate-45 rtl:-rotate-135"
-            alt="icon"
-          />
-        </div>
-      </Link>
-    </div>
-  );
-};
-
-
+export default LeadConversion;

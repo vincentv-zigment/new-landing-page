@@ -3,26 +3,25 @@
 import { useRef } from "react";
 
 // gsap
-import { useGSAP } from "@gsap/react";
 import hasFadeAnim from "@/lib/animation/hasFadeAnim";
+import { useGSAP } from "@gsap/react";
 
 // lib
 import { delayTime } from "@/lib/helper/delayTime";
 
 // types
-import { ServiceDetailsType } from "@/types";
 
 // components
 import TitleSection2 from "@/components/shared/title-section/title-section2";
 
 const contentArray = [
   {
-    title: 'We understand your requirements and the workflow',
+    title: 'We study your workflows and requirements',
     description: '',
     image:'/assets/imgs/icon/icon-r-1.png'
   },
   {
-    title: 'Train the AI agents with your data ',
+    title: 'Train the AI agents with your data and sales goals',
     description: '',
     image:'/assets/imgs/icon/icon-r-2.png'
   },
@@ -32,7 +31,7 @@ const contentArray = [
     image:'/assets/imgs/icon/icon-r-3.png'
   },
   {
-    title: 'Test workflows and go live',
+    title: 'Test the agent and the workflows and go live',
     description: '',
     image:'/assets/imgs/icon/icon-r-4.png'
   }
@@ -96,17 +95,16 @@ type ServiceProps = {
 
 const ServiceCard2 = ({ service }: ServiceProps) => {
   return (
-    <div className="px-[20px] py-[30px] lg:py-[20px] xl:px-[30px] xl:py-[40px] border border-border rounded-[40px] text-center h-full flex flex-col justify-between items-center">
+    <div className="px-[20px] py-[30px] lg:py-[20px] xl:px-[0px] xl:py-[40px] border border-border rounded-[40px] text-center h-full flex flex-col justify-between items-center">
       <div className="pb-[16px] md:pb-[35px] w-[60px] mx-auto">
         <Image width={60} height={60} src={service.image} alt="icon" />
       </div>
       <div>
         <Link href="#">
-          <h3 className="text-[18px] xl:text-[24px] max-w-[182px] mx-auto pb-[10px] md:pb-[16px]">
+          <div className="text-[16px] xl:text-[20px] p-8 mx-auto  ">
             {service.title}
-          </h3>
+          </div>
         </Link>
-        <p className="pb-[20px] lg:pb-[32px]">{service.description}</p>
       </div>
       <Link href="#" className="inline-block">
         <div className="rounded-full p-0 flex justify-center items-center w-[50px] h-[50px] md:w-[60px] md:h-[60px] bg-transparent border border-border hover:bg-theme">

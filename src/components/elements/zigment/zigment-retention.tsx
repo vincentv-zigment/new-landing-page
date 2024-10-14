@@ -67,9 +67,7 @@ const ZigmentRetention = ( ) => {
               className="pb-[15px] md:pb-[24px] max-w-[463px] has_fade_anim"
             />
             <div className="max-w-[520px]">
-              <p className="has_fade_anim">{`Start with a pre-designed template to create a Facebook ad that’s visually appealing and engaging. Select a professionally designed.
-
-`}</p>
+              <p className="has_fade_anim">{`Deploy Zigment as a 24/7 concierge for your customers and make them feel valued much more. Increase your customer retention by over 45%.`}</p>
             </div>
               <div className="mt-[30px] md:mt-[45px] has_fade_anim">
                 {contentArray.map((item, i) => (

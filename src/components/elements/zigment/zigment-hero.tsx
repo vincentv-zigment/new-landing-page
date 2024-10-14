@@ -105,7 +105,7 @@ const ZigmentHero = (   ) => {
             </div>
             <div className="pb-[20px] has_fade_anim" data-delay="0.30">
               <div className="">
-                <h1 className="text-[50px] md:text-[70px] lg:text-[90px] xl:text-[130px] leading-none font-black relative inline">
+                <h1 className="text-[50px] md:text-[70px] lg:text-[70px] xl:text-[100px] leading-none font-black relative inline">
                   <Image
                     width={60}
                     height={70}
@@ -113,21 +113,17 @@ const ZigmentHero = (   ) => {
                     className="max-w-[21px] md:max-w-[60px] absolute -top-[11px] md:-top-[28px] -left-[22px] md:-left-[50px] text-xs"
                     alt="shape"
                   />
-                  {`Engagement, evolved
-for modern selling.
-`}
+                  {`Engagement, evolved for modern selling.`}
                 </h1>
               </div>
             </div>
-            <div className="pb-[20px] md:pb-[43px] max-w-[630px] mx-auto">
+            <div className="pb-[20px] md:pb-[43px] w-full max-w-4xl mx-auto">
               <p
-                className="text-[16px] md:text-[22px] text-primary leading-[1.36] has_fade_anim"
+                className="text-[16px] md:text-[20px] text-primary leading-[1.36] has_fade_anim"
                 data-delay="0.45"
               >
-                {`Zigment nurtures every customer individually.
- It works across all your conversation channels like web-chat, SMS, Email or even social. 
-It’s part tech, part magic.
-`}
+                {`Zigment nurtures every customer individually.  It works across all your conversation 
+channels like web-chat, SMS, Email or even social. It’s part tech, part magic.`}
               </p>
             </div>
             <div
@@ -159,9 +155,9 @@ It’s part tech, part magic.
                   <h2 className={`text-[24px] ${index === 0 && '!text-white'} !leading-tight pb-[40px]`}>
                     {content.title}
                   </h2>
-                  <h2 className={`text-[24px] ${index === 0 && '!text-white'} !leading-tight`}>
+                  <p className={`text-[24px] ${index === 0 && '!text-white'} !leading-tight`}>
                     {content.description}
-                  </h2>
+                  </p>
                    
                 </div>
                   
