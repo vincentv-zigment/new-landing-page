@@ -98,7 +98,7 @@ const ZigmentHero = (   ) => {
       <section className="pt-[150px] lg:pt-[155px] xl:pt-[240px] pb-[50px] xl:pb-[100px] text-center bg-[url('/assets/imgs/background/bg.png')] bg-no-repeat bg-[#F9F6ED] bg-cover">
         <div className="container" ref={containerRef}>
           <div className="pb-[35px] md:pb-[50px] lg:pb-[100px]">
-            <div className="max-w-xl pb-[22px] mx-auto">
+            <div className="max-w-2xl pb-[22px] mx-auto">
               <h2 className="text-[18px] md:text-[36px] has_fade_anim">
                 {`AI-Native Sales Engagement Platform`}
               </h2>

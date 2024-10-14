@@ -1,26 +1,24 @@
 "use client";
 
-import { useRef } from "react";
 import Link from "next/link";
+import { useRef } from "react";
 
 // gsap
-import { useGSAP } from "@gsap/react";
 import hasFadeAnim from "@/lib/animation/hasFadeAnim";
 import hasPinContent from "@/lib/animation/hasPinContent";
+import { useGSAP } from "@gsap/react";
 
 // lib
 import { cn } from "@/lib/utils";
 
 // types
-import { ActionBtnType } from "@/types";
 
 // shadcn components
 import { buttonVariants } from "@/components/ui/button";
 
 // components
-import TitleSection2 from "@/components/shared/title-section/title-section2";
-import ServiceCard6 from "../service/card/service-card6";
 import Title1 from "@/components/shared/title/title1";
+import ServiceCard6 from "../service/card/service-card6";
 
 const contentArray = [
   {
@@ -69,7 +67,7 @@ const LeadConversion = () => {
   );
 
   return (
-    <section className="sec_space1 ">
+    <section className="pt-[60px] md:pt-[100px] lg:pt-[150px] xl:pt-[200px] ">
       <div className="container bg-white" ref={containerRef}>
         <div
           className="flex justify-between flex-col xl:flex-row-reverse  gap-x-[20px] gap-y-[40px]"

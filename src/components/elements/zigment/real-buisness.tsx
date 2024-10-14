@@ -25,7 +25,7 @@ const RealBusiness = ( ) => {
   );
 
   return (
-    <section className="pt-[43px] md:pt-[73px] xl:pt-[103px] 2xl:pt-[173px]">
+    <section className="pt-[60px] md:pt-[100px] lg:pt-[150px] xl:pt-[200px]">
       <div className="container" ref={containerRef}>
         <div className="relative">
           {/* {shape_img && (
