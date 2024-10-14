@@ -113,7 +113,7 @@ const ZigmentHero = (   ) => {
                     className="max-w-[21px] md:max-w-[60px] absolute -top-[11px] md:-top-[28px] -left-[22px] md:-left-[50px] text-xs"
                     alt="shape"
                   />
-                  {`Engagement, evolved for modern selling.`}
+                  {`Engagement, evolved`}<br className="hiiden lg:block"/> {`for modern selling.`}
                 </h1>
               </div>
             </div>
