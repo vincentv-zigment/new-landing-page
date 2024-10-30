@@ -20,6 +20,9 @@ import { Button } from "@/components/ui/button";
 import Signup from "../signup";
 import Signin from "../signin";
 import VideoModal from "@/components/tools/video-modal";
+import { LuBrainCircuit } from "react-icons/lu";
+import { MdOutlineTimer3 } from "react-icons/md";
+import { RiGlobalLine } from "react-icons/ri";
 
 type Props = {
   hero: {
@@ -54,15 +57,19 @@ type Props = {
 const contentArray = [
   {
     title: 'Alpha-Intelligence',
-    description: 'Drive human-like interactions and workflow actions with Zigment AI agents'
+    description: 'Drive human-like interactions and workflow actions with Zigment AI agents',
+    logo:LuBrainCircuit 
   },
   {
     title: 'Under 3 Seconds',
-    description: 'Instantly engage, nurture and drive sales motion with your prospects'
+    description: 'Instantly engage, nurture and drive sales motion with your prospects',
+    logo:MdOutlineTimer3 
   },
   {
     title: 'Everywhere',
-    description: 'Engage across all your business touchpoints including Website & social media'
+    description: 'Engage across all your business touchpoints including Website & social media',
+    logo:RiGlobalLine 
+
   }
 ];
 
@@ -151,10 +158,11 @@ channels like web-chat, SMS, Email or even social. It’s part tech, part magic.
                   ${index === 2 && 'bg-[#C0AAFF]'}
                 
                 w-full  h-full rounded-[40px] p-8 grow mx-auto has_fade_anim`}>
-                <div className="w-full h-full flex flex-col justify-between items-center">
-                  <h2 className={`text-[24px] ${index === 0 && '!text-white'} !leading-tight pb-[40px]`}>
+                <div className="w-full h-full flex flex-col justify-between items-center gap-8">
+                  <h2 className={`text-[24px] ${index === 0 && '!text-white'} !leading-tight  `}>
                     {content.title}
                   </h2>
+                    <content.logo className={`text-primary w-12 h-12 ${index === 0 && '!text-white'}`} />
                   <p className={`text-[24px] ${index === 0 && '!text-white'} !leading-tight`}>
                     {content.description}
                   </p>

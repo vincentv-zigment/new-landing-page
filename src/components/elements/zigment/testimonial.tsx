@@ -33,8 +33,44 @@ type Props = {
   };
 };
 
-const Testimonial = ({ testimonial }: Props) => {
-  const { title, items } = testimonial.data;
+const items:{
+  name: string;
+  occupation: string;
+  image: string;
+  text: string;
+  rating: number;
+}[] = [
+  {
+    name:'Charry Maron',
+    occupation:'Developer',
+    image:'/images/testimonial/1.jpg',
+    text:'Our unique and flexible pricing model is designed to allow any type of business to access high-end digital solutions, and to support them as they grow. Pay by usage, not by number of contacts.',
+    rating:5
+  },
+  {
+    name:'Charry Maron',
+    occupation:'Developer',
+    image:'/images/testimonial/1.jpg',
+    text:'Our unique and flexible pricing model is designed to allow any type of business to access high-end digital solutions, and to support them as they grow. Pay by usage, not by number of contacts.',
+    rating:5
+  },
+  {
+    name:'Charry Maron',
+    occupation:'Developer',
+    image:'/images/testimonial/1.jpg',
+    text:'Our unique and flexible pricing model is designed to allow any type of business to access high-end digital solutions, and to support them as they grow. Pay by usage, not by number of contacts.',
+    rating:5
+  },
+  {
+    name:'Charry Maron',
+    occupation:'Developer',
+    image:'/images/testimonial/1.jpg',
+    text:'Our unique and flexible pricing model is designed to allow any type of business to access high-end digital solutions, and to support them as they grow. Pay by usage, not by number of contacts.',
+    rating:5
+  }
+]
+
+const Testimonial = ( ) => {
 
   const containerRef = useRef<HTMLDivElement>(null!);
 

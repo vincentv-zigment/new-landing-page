@@ -34,14 +34,14 @@ export default function Page() {
   return (
     <main>
       <SeoData />
-      <ZigmentHero   />
+      <ZigmentHero/>
       <Brand />
-      <Counter   />
-      <Service   />
+      <Counter/>
+      <Service/>
       <RealBusiness/>
-      <LeadConversion />
-      <ZigmentRetention   />
-      <Testimonial testimonial={testimonial} />
+      <LeadConversion/>
+      <ZigmentRetention/>
+      <Testimonial/>
       <MeetZig/>
       <EnterpriseGradeAI/>
       <WorkflowsSection/>

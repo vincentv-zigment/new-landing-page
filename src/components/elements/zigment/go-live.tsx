@@ -1,10 +1,12 @@
 "use client";
 
 import { useRef } from "react";
+import { GoGoal } from "react-icons/go";
 
 // gsap
 import hasFadeAnim from "@/lib/animation/hasFadeAnim";
 import { useGSAP } from "@gsap/react";
+import { BsWindow } from "react-icons/bs";
 
 // lib
 import { delayTime } from "@/lib/helper/delayTime";
@@ -14,26 +16,36 @@ import { delayTime } from "@/lib/helper/delayTime";
 // components
 import TitleSection2 from "@/components/shared/title-section/title-section2";
 
+import { LucideIcon, RadioTower } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { IconType } from "react-icons/lib";
+import { LuNetwork } from "react-icons/lu";
+
 const contentArray = [
   {
+    id:1,
     title: 'We study your workflows and requirements',
     description: '',
-    image:'/assets/imgs/icon/icon-r-1.png'
+    logo:LuNetwork  
   },
   {
+    id:2,
     title: 'Train the AI agents with your data and sales goals',
     description: '',
-    image:'/assets/imgs/icon/icon-r-2.png'
+    logo:GoGoal
   },
   {
+    id:3,
     title: 'Integrate with your CRM and other software',
     description: '',
-    image:'/assets/imgs/icon/icon-r-3.png'
+    logo: BsWindow  
   },
   {
+    id:4,
     title: 'Test the agent and the workflows and go live',
     description: '',
-    image:'/assets/imgs/icon/icon-r-4.png'
+    logo:RadioTower 
   }
 ];
 
@@ -64,7 +76,7 @@ const GoLive = ( ) => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {contentArray.map((item, i) => (
               <div
-                key={item.title}
+                key={`content_key_${item.id}`}
                 className="has_fade_anim"
                 data-delay={delayTime(i + 1)}
               >
@@ -80,24 +92,26 @@ const GoLive = ( ) => {
 export default GoLive;
 
 
-import Image from "next/image";
-import Link from "next/link";
 
 // types
 
 type ServiceProps = {
   service: {
+    id:number;
     title: string;
     description: string;
-    image: string;
+    logo: IconType | LucideIcon;
   };
 };
 
 const ServiceCard2 = ({ service }: ServiceProps) => {
   return (
     <div className="px-[20px] py-[30px] lg:py-[20px] xl:px-[0px] xl:py-[40px] border border-border rounded-[40px] text-center h-full flex flex-col justify-between items-center">
-      <div className="pb-[16px] md:pb-[35px] w-[60px] mx-auto">
-        <Image width={60} height={60} src={service.image} alt="icon" />
+      <div className="pb-[16px] md:pb-[35px] w-[60px] mx-auto relative">
+        {service.id === 3 &&
+        <span className="absolute font-bold text-black top-1/2 -translate-y-full left-1/2 -translate-x-1/2">CRM</span>
+        }
+        <service.logo className="text-primary w-16 h-16" />
       </div>
       <div>
         <Link href="#">

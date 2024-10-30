@@ -96,29 +96,29 @@ const Counter = ( ) => {
               </div>
           </div>
           <div className="col-md-5 col-lg-7">
-            <div className="bg-[#F6F0DF] relative rounded-[40px] max-w-full lg:max-w-[430px] xl:max-w-[530px] 2xl:max-w-[630px] ms-[unset] lg:ms-auto ps-[54px] pe-[45px] pt-[50px] md:pt-[140px]">
-              <div className="hidden md:block absolute start-[55px] top-[41px] w-full lg:w-[200px] 2xl:w-[296px]">
+            <div className="bg-[#F6F0DF] relative rounded-[40px] max-w-full lg:max-w-[430px] xl:max-w-[530px] 2xl:max-w-[630px] ms-[unset] lg:ms-auto ps-[54px] pe-[45px] pt-[50px] ">
+              <div className="hidden md:block absolute start-10 lg:-start-[20px] xl:-start-[50px] 2xl:-start-[90px] -top-20 md:top-[20%] lg:top-[10%] w-full lg:w-[200px] 2xl:w-[256px] drop-shadow-lg  z-20">
                   <Image
-                    width={296}
-                    height={312}
-                    src={`/assets/imgs/zigment-landing-page/counter/counter-img3.webp`}
+                    width={300}
+                    height={300}
+                    src={`/assets/imgs/zigment-landing-page/counter/z_web_IG-01.svg`}
                     className="rounded-[30px]"
                     data-speed="0.95"
                     alt="shape"
                   />
               </div>
-              <div className="hidden md:block absolute bottom-[50px] lg:bottom-[140px] -start-[20px] lg:-start-[60px] z-[2] drop-shadow-3 w-full lg:w-[300px] 2xl:w-[386px]">
+              <div className="hidden md:block absolute bottom-[20px] lg:bottom-[80px] -start-[20px] lg:-start-[80px] z-[2] drop-shadow-3 w-full lg:w-[300px] 2xl:w-[386px]">
                   <Image
                     width={386}
                     height={174}
-                    src={`/assets/imgs/zigment-landing-page/counter/counter-img2.webp`}
+                    src={`/assets/imgs/zigment-landing-page/counter/z_web_IG-02.svg`}
                     className="rounded-[30px]"
                     data-speed="0.95"
                     alt="shape"
                   />
               </div>
-              <div className="relative flex justify-end">
-                  <Image width={415} height={559} src={'/assets/imgs/zigment-landing-page/counter/counter-img1.webp'} alt="shape" />
+              <div className="relative flex justify-center md:justify-end md:-right-8">
+                  <Image width={1000} height={1000} className="w-[300px] h-auto object-contain"  src={'/assets/imgs/zigment-landing-page/counter/z_web_IG_phone mock 1.svg'} alt="shape" />
               </div>
             </div>
           </div>

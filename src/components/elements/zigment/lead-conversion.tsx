@@ -31,22 +31,22 @@ const contentArray = [
     {
       title: 'Digital Marketing Campaigns',
       description: `Engage customers directly from your digital campaigns like CTWA or Lead Form Ads`,
-      image:'/assets/imgs/icon/icon-r-5.png'
+      image:'/assets/imgs/icon/icon-r-54.png'
     },
     {
       title: 'Web chat, Email / SMS / Whatsapp',
       description: `Let Zigment be the first point of contact across all your touchpoints engaging, qualifying and driving a sales motion`,
-      image:'/assets/imgs/icon/icon-r-6.png'
+      image:'/assets/imgs/icon/icon-r-64.png'
 
     },
     {
       title: 'Social Media',
       description: `Zigment engages with your audience who are trying to connect with you via comments and DM`,
-      image:'/assets/imgs/icon/icon-r-6.png'
+      image:'/assets/imgs/icon/icon-r-67.png'
     }
   ];
 
-const ZigmentRetention = ( ) => {
+const LeadConversion = ( ) => {
 
   const containerRef = useRef<HTMLDivElement>(null!);
 
@@ -66,24 +66,25 @@ const ZigmentRetention = ( ) => {
               <Image
                 width={492}
                 height={542}
-                src={`/assets/imgs/zigment-landing-page/zigment-retention/img-r-7.webp`}
+                src={`/assets/imgs/zigment-landing-page/lead-conversion/z_web_IG-04.svg`}
                 alt="community-thumb"
+                className="drop-shadow-md"
               />
               <Image
                 width={205}
                 height={120}
-                src={`/assets/imgs/zigment-landing-page/zigment-retention/img-r-8.webp`}
+                src={`/assets/imgs/zigment-landing-page/lead-conversion/z_web_IG-05.svg`}
                 data-speed="1.2"
-                className="absolute bottom-[142px] left-[23px] "
+                className="absolute bottom-[142px] drop-shadow-lg left-[23px] "
                 alt="community-thumb"
               />
               <Image
-                width={272}
-                height={272}
-                src={`/assets/imgs/zigment-landing-page/zigment-retention/img-r-9.webp`}
+                width={500}
+                height={500}
+                src={`/assets/imgs/zigment-landing-page/lead-conversion/z_web_IG-06.svg`}
 
                 data-speed="0.8"
-                className="absolute -right-[60px] top-[48px]"
+                className="absolute w-[180px] drop-shadow-lg h-auto object-contain right-2 top-[48px]"
                 alt="community-thumb"
               />
           </div>
@@ -127,4 +128,4 @@ const ZigmentRetention = ( ) => {
   );
 };
 
-export default ZigmentRetention;
+export default LeadConversion;

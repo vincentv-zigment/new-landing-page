@@ -91,8 +91,8 @@ const WorkflowsSection = ( ) => {
               </Accordion>
             </div>
           </div>
-          <div className="relative pt-0 md:pt-[50px] max-w-[660px] bg-gray-100 rounded-xl block">
-            
+          <div className="relative pt-0 md:pt-[50px] max-w-[500px] bg-gray-100 rounded-xl mx-auto">
+            <Image alt="" width={500} height={500} className="w-full h-auto object-contain" src={`/assets/imgs/zigment-landing-page/workflow-section/mock5.png`}/>
           </div>
         </div>
       </div>

@@ -62,7 +62,7 @@ const MeetZig = () => {
               width={630}
               height={700}
               src={
-                "/assets/imgs/zigment-landing-page/meet-zig/about1.webp"
+                "/assets/imgs/zigment-landing-page/meet-zig/z_web_IG-07.svg"
               }
               className="rounded-[40px]"
               alt="community-thumb"
